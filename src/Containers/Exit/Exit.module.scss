@@ -1,0 +1,20 @@
+.zoom {
+  animation: 800ms ease-in forwards zoomIn;
+  opacity: 1;
+}
+
+.wrapper {
+  height: 680px;
+  width: 800px;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.2) translate(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(0);
+  }
+}

@@ -1,0 +1,31 @@
+.wrapper {
+  height: 680px;
+  width: 800px;
+}
+
+.animations {
+  opacity: 1;
+  animation: appearIn 1.5s ease-in forwards, pulsation 3s ease-in-out infinite;
+}
+
+@keyframes appearIn {
+  0% {
+    opacity: 0;
+    transform: scale(.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulsation {
+  0% {
+    scale: 0.96;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.96;
+  }
+}

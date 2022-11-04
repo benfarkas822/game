@@ -1,0 +1,78 @@
+@import '../../scss/abstracts/_variables.scss';
+
+.button {
+  font-family: $font-base;
+  font-size: 36px;
+  border: none;
+  padding: 22px 40px 12px 40px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 5px 0 0 $button-start, 0 10px 0 0 $button-shadow;
+  position: relative;
+  color: white;
+  background: linear-gradient($button-start, $button-end);
+  cursor: pointer;
+  transition: all 0.25s;
+  top: 0;
+  z-index: 45;
+  text-shadow: 0 3px #00000040;
+
+  &:after {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    content: ' ';
+    width: 15px;
+    height: 15px;
+    background: $white;
+    box-shadow: 0 0 10px $white;
+    transform: skew(-20deg);
+    border-radius: 20px;
+  }
+
+  &:disabled {
+    background: linear-gradient($light-gray, $medium-gray);
+    box-shadow: 0 5px 0 0 $light-gray, 0 10px 0 0 $disabled-gray-shadow;
+    pointer-events: none;
+  }
+}
+
+button:hover {
+  outline: none;
+}
+
+button:hover {
+  box-shadow: 0 5px 0 0 #1d7f8a;
+  top: 5px;
+}
+
+.wrong {
+  background: linear-gradient($error-button-start, $error-button-end);
+  box-shadow: 0 5px 0 0 $error-button-start, 0 10px 0 0 $error-button-shadow;
+}
+
+.wrong:hover {
+  box-shadow: 0 5px 0 0 #a72b41;
+}
+
+.correct {
+  background: linear-gradient($correct-button-start, $correct-button-end);
+  box-shadow: 0 5px 0 0 $correct-button-start, 0 10px 0 0 $correct-button-shadow;
+}
+
+.correct:hover {
+  box-shadow: 0 5px 0 0 #4e883c;
+}
+
+.back {
+  background-image: url("data:image/svg+xml,%3Csvg id='icon-arrow' xmlns='http://www.w3.org/2000/svg' width='109.814' height='101.058' viewBox='0 0 109.814 101.058'%3E%3Cpath id='Union_1' data-name='Union 1' d='M4843.607,764.228l-62.313-46.522a4,4,0,0,1,0-6.41l62.313-46.522a4,4,0,0,1,6.393,3.205V698h23.5a16,16,0,1,1,0,32H4850v31.022a4,4,0,0,1-4.017,4.007A3.942,3.942,0,0,1,4843.607,764.228Z' transform='translate(-4779.687 -663.971)' fill='%23404141'/%3E%3C/svg%3E%0A");
+  background-size: 40px 60px;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: $gray;
+  padding: 40px 45px;
+  box-shadow: 0 5px 0 0 $light-gray;
+  border-radius: 30px;
+}

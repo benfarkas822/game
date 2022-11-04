@@ -1,0 +1,33 @@
+@import '../../../scss/abstracts/_variables.scss';
+
+.main {
+  z-index: 100;
+}
+
+.field {
+  margin-top: 30px;
+  margin-left: 40px;
+  height: 830px;
+  width: 1495px;
+  border: 12px solid white;
+  background: rgba(255, 255, 255, 0.31);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.8px);
+  border-radius: 60px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+
+  &:after {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    content: ' ';
+    width: 35px;
+    height: 35px;
+    background: $white;
+    box-shadow: 0 0 10px $white;
+    transform: skew(-20deg);
+    border-radius: 20px;
+  }
+}
